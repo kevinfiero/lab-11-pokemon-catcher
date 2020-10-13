@@ -1,1 +1,14 @@
 /* add home page styles here */
+button{
+    width:75px;
+    align-self: center;
+    margin-top: 5px;
+}
+
+#num-caught{
+    width:175px;
+    height: 50px;
+    align-self: center;
+    text-align: center;
+    margin-top: 5px;
+}

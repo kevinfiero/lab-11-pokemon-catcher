@@ -22,6 +22,7 @@ img1Block.addEventListener('click', () => {
     incrementEncounter(currentThreeArray[2]);
 
     if (Number(getFromLocalStorage('caught') === 10)) {
+
         window.location.replace('../results/results.html');
     }
     
@@ -41,6 +42,7 @@ img2Block.addEventListener('click', () => {
     incrementEncounter(currentThreeArray[2]);
 
     if (Number(getFromLocalStorage('caught') === 10)) {
+
         window.location.replace('../results/results.html');
     }
 
@@ -60,6 +62,7 @@ img3Block.addEventListener('click', () => {
     incrementEncounter(currentThreeArray[2]);
 
     if (Number(getFromLocalStorage('caught') === 10)) {
+        
         window.location.replace('../results/results.html');
     }
 

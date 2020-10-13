@@ -5,3 +5,17 @@ table{
 th{
     font-weight: 800;
 }
+
+button{
+    width:75px;
+    align-self: center;
+    margin-top: 5px;
+}
+
+#num-rounds{
+    width:175px;
+    height: 50px;
+    align-self: center;
+    text-align: center;
+    margin-top: 5px;
+}

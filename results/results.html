@@ -14,25 +14,42 @@
 
 <body>
     <header>
-        <div>
-            <label id='num-caught'></label>
+        <div class='flex-column'>
+            <label id='num-rounds'></label>
+            <button id='reset'>Reset</button>
+            
         </div>
         <div id = 'icon-group'>
-            <a href = '../catch/catch.html'><img class = 'header-icons' title='Catch' src='../assets/pokeball.svg'></a>
-            <!-- <a href = '../results/results.html'><img class = 'header-icons' title='Results' src='../assets/pokedex.svg'></a> -->
-            <button id='reset'>Reset</button>
+            <a href = '../catch/catch.html'><img class = 'header-icons' id='catch' title='Catch' src='../assets/pokeball.svg'></a>            
         </div>
     </header>
     <main>
-        <table>
-            <thead>
-                <th>Pokemon</th>
-                <th>Encountered</th>
-                <th>Caught</th>
-            </thead>
-            <tbody id='table-body'>
-            </tbody>
-        </table>
+        <div class='flex-row'>
+            <div class='flex-column'>
+                <h1>Last Round Results</h1>
+                <table>
+                    <thead>
+                        <th>Pokemon</th>
+                        <th>Encountered</th>
+                        <th>Caught</th>
+                    </thead>
+                    <tbody id='table-current-body'>
+                    </tbody>
+                </table>
+            </div>
+            <div class='flex-column'>
+                <h1>All Time Results</h1>
+                <table>
+                    <thead>
+                        <th>Pokemon</th>
+                        <th>Encountered</th>
+                        <th>Caught</th>
+                    </thead>
+                    <tbody id='table-global-body'>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <p>Click Reset to clear results</p>
         <p>Click the Pokéball to play again!</p>
     </main>

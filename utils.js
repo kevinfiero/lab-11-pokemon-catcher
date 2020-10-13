@@ -1,4 +1,4 @@
-import pokeRawArray from '../data/pokemon.js';
+import pokeRawArray from './data/pokemon.js';
 
 export function getFromLocalStorage(key){
     return JSON.parse(localStorage.getItem(key));

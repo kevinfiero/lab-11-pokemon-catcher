@@ -20,13 +20,15 @@ export function findByID(array, id){
 export function reset(){
     localStorage.clear();
     location.reload();
+    setInLocalStorage('pokeData', []);
     initializeData();
     setInLocalStorage('currentThree', [1, 1, 1]);
     setInLocalStorage('round', 0);
 }
 
 export function initializeData(){
-    let roundArray = [];
+
+    const roundArray = getFromLocalStorage('pokeData');
     let pokeArray = [];
 
     for (let i = 0; i < pokeRawArray.length; i++){
@@ -38,9 +40,8 @@ export function initializeData(){
             caught: 0,
             usedLastRound: false
         };
-
         pokeArray.push(pokemon);
-        roundArray.push(pokeArray);
-        setInLocalStorage('session1', pokeArray);
     }
+    roundArray.push(pokeArray);
+    setInLocalStorage('pokeData', pokeArray);
 }

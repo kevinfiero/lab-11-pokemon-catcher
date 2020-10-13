@@ -1,15 +1,10 @@
-import { initializeData, setInLocalStorage } from './utils.js';
-
-
+import { reset } from './utils.js';
 
 const startButton = document.querySelector('button');
 
 startButton.addEventListener('click', () => {
 
-
-    initializeData();
-    setInLocalStorage('currentThree', [1, 1, 1]);
-
+    reset();
     window.location.replace('./catch/catch.html');
 
 });

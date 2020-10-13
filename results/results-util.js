@@ -2,12 +2,11 @@ import { getFromLocalStorage } from '../utils.js';
 
 export function renderResultsTable(){
 
-    const pokeArray = getFromLocalStorage('session1');
+    const pokeArray = getFromLocalStorage('pokeData');
 
     if (pokeArray !== null){
         const tbody = document.getElementById('table-body');
     
-
         let name;
         let encounter;
         let caught;

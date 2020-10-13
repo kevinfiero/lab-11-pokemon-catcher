@@ -3,62 +3,47 @@ import { setInLocalStorage, getFromLocalStorage } from '../utils.js';
 
 export function getThreeRandomPokemon(){
 
-    let indexArray = [];
     let index;
-  
-    const localStorageArray = getFromLocalStorage('session1');
+    let indexArray = [];
+    const localStorageArray = getFromLocalStorage('pokeData');
     const localThreeArray = getFromLocalStorage('currentThree');
-    let tempArray = [];
-    const threePokemonArray = [];
 
     for (let j = 0; j < 3; j++){
-        tempArray.push(findPokemonIndexInLocalStorage(localThreeArray[j]));
-        
+        indexArray.push(findPokemonIndexInLocalStorage(localThreeArray[j]));
     }
 
     for (let i = 0; i < 3; i++){
-
         do {
             index = Math.floor(Math.random() * pokeRawArray.length);
         }
-        while (indexArray.includes(index) || tempArray.includes(index));
+        while (indexArray.includes(index));
 
-        indexArray.push(index);
-        
-        threePokemonArray[i] = localStorageArray[index];
-   
+        indexArray[i] = index;
+        localThreeArray[i] = localStorageArray[index];
     }
-    setInLocalStorage('currentThree', threePokemonArray);
-
+    
+    setInLocalStorage('currentThree', localThreeArray);
 }
 
 export function incrementEncounter(thisPokemon){
 
-    const localStorageArray = getFromLocalStorage('session1');
+    const localStorageArray = getFromLocalStorage('pokeData');
 
-    for (let i = 0; i < localStorageArray.length; i++){
+    const i = findPokemonIndexInLocalStorage(thisPokemon);
+    localStorageArray[i].encounter++;
 
-        if (localStorageArray[i].name === thisPokemon.name){
-            localStorageArray[i].encounter++;
-        }
-    }
-
-    setInLocalStorage('session1', localStorageArray);
+    setInLocalStorage('pokeData', localStorageArray);
 
 }
 
 export function incrementCaught(thisPokemon){
 
-    const localStorageArray = getFromLocalStorage('session1');
+    const localStorageArray = getFromLocalStorage('pokeData');
 
-    for (let i = 0; i < localStorageArray.length; i++){
+    const i = findPokemonIndexInLocalStorage(thisPokemon);
+    localStorageArray[i].caught++;
 
-        if (localStorageArray[i].name === thisPokemon.name){
-            localStorageArray[i].caught++;
-        }
-    }
-
-    setInLocalStorage('session1', localStorageArray);
+    setInLocalStorage('pokeData', localStorageArray);
     updateNumCaught();
 
 }
@@ -91,25 +76,20 @@ export function renderThreePokemon(threePokemonArray){
 
 
 export function findPokemonIndexInLocalStorage(thisPokemon){
-
-    const localStorageArray = getFromLocalStorage('session1');
-
+    const localStorageArray = getFromLocalStorage('pokeData');
+    
     for (let i = 0; i < localStorageArray.length; i++){
 
         if (localStorageArray[i].name === thisPokemon.name){
             return i;
         }
     }
-
 }
 
 export function updateNumCaught(){
-
     const numCaught = Number(getFromLocalStorage('caught')) + 1;
     const numCaughtDiv = document.getElementById('num-caught');
     numCaughtDiv.textContent = `Pokemon Caught: ${numCaught}`;
-
     setInLocalStorage('caught', numCaught);
-
 }
 

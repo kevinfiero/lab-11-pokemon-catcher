@@ -1,5 +1,13 @@
-// import functions and grab DOM elements
+import { getThreeRandomPokemon, initializeData, getFromLocalStorage, setInLocalStorage, findByID } from './utils.js';
 
-// initialize state
+initializeData();
 
-// set event listeners to update state and DOM
+const threePokemonArray = getThreeRandomPokemon();
+
+//increment encounter by 1
+
+//display stats of three in DOM
+
+
+//const img1Block = document.getElementById('img1');
+

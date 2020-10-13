@@ -1,3 +1,5 @@
+import pokeRawArray from '../data/pokemon.js';
+
 export function getFromLocalStorage(key){
     return JSON.parse(localStorage.getItem(key));
 }
@@ -18,4 +20,27 @@ export function findByID(array, id){
 export function reset(){
     localStorage.clear();
     location.reload();
+    initializeData();
+    setInLocalStorage('currentThree', [1, 1, 1]);
+    setInLocalStorage('round', 0);
+}
+
+export function initializeData(){
+    let roundArray = [];
+    let pokeArray = [];
+
+    for (let i = 0; i < pokeRawArray.length; i++){
+
+        var pokemon = {
+            name: pokeRawArray[i].pokemon,
+            imgURL: pokeRawArray[i].url_image,
+            encounter: 0,
+            caught: 0,
+            usedLastRound: false
+        };
+
+        pokeArray.push(pokemon);
+        roundArray.push(pokeArray);
+        setInLocalStorage('session1', pokeArray);
+    }
 }

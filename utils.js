@@ -43,5 +43,18 @@ export function initializeData(){
         pokeArray.push(pokemon);
     }
     roundArray.push(pokeArray);
-    setInLocalStorage('pokeData', pokeArray);
+    console.log(roundArray.length);
+    setInLocalStorage('pokeData', roundArray);
+}
+
+export function nextRound(){
+
+    let roundNum = getFromLocalStorage('round');
+    roundNum++;
+    setInLocalStorage('round', roundNum);
+
+    initializeData();
+
+    setInLocalStorage('currentThree', [1, 1, 1]);
+    
 }

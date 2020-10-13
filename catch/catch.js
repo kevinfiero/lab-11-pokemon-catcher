@@ -1,4 +1,4 @@
-import { incrementCaught, renderThreePokemon, getThreeRandomPokemon, initializeData, getFromLocalStorage, setInLocalStorage, findByID, incrementEncounter } from './utils.js';
+import { incrementCaught, renderThreePokemon, getThreeRandomPokemon, initializeData, getFromLocalStorage, setInLocalStorage, incrementEncounter } from './catch-utils.js';
 
 initializeData();
 const tempArray = [1, 1, 1];

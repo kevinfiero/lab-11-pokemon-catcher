@@ -14,3 +14,8 @@ export function findByID(array, id){
     }
     return null;
 }
+
+export function reset(){
+    localStorage.clear();
+    location.reload();
+}

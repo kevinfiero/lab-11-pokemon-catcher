@@ -1,4 +1,5 @@
-import { incrementCaught, renderThreePokemon, getThreeRandomPokemon, initializeData, getFromLocalStorage, setInLocalStorage, incrementEncounter } from './catch-utils.js';
+import { incrementCaught, renderThreePokemon, getThreeRandomPokemon, initializeData, incrementEncounter } from './catch-utils.js';
+import { setInLocalStorage, getFromLocalStorage, reset } from '../utils.js';
 
 initializeData();
 const tempArray = [1, 1, 1];
@@ -12,6 +13,8 @@ setInLocalStorage('caught', 0);
 const img1Block = document.getElementById('img1');
 const img2Block = document.getElementById('img2');
 const img3Block = document.getElementById('img3');
+const resetButton = document.getElementById('reset');
+
 
 img1Block.addEventListener('click', () => {
 
@@ -23,7 +26,7 @@ img1Block.addEventListener('click', () => {
     incrementEncounter(currentThreeArray[2]);
 
     if (Number(getFromLocalStorage('caught') === 10)) {
-        window.location.href = './results.html';
+        window.location.href = '../results/results.html';
     }
     
     getThreeRandomPokemon();
@@ -42,7 +45,7 @@ img2Block.addEventListener('click', () => {
     incrementEncounter(currentThreeArray[2]);
 
     if (Number(getFromLocalStorage('caught') === 10)) {
-        window.location.href = './results.html';
+        window.location.href = '../results/results.html';
     }
 
     getThreeRandomPokemon();
@@ -61,17 +64,15 @@ img3Block.addEventListener('click', () => {
     incrementEncounter(currentThreeArray[2]);
 
     if (Number(getFromLocalStorage('caught') === 10)) {
-        window.location.href = './results.html';
+        window.location.href = '../results/results.html';
     }
 
     getThreeRandomPokemon();
     currentThreeArray = getFromLocalStorage('currentThree');
     renderThreePokemon(currentThreeArray);
 
-
-
 });
 
-
-
-
+resetButton.addEventListener('click', () => {
+    reset();
+});

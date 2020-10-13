@@ -26,7 +26,7 @@ img1Block.addEventListener('click', () => {
     incrementEncounter(currentThreeArray[2]);
 
     if (Number(getFromLocalStorage('caught') === 10)) {
-        window.location.href = '../results/results.html';
+        window.location.href = './results/results.html';
     }
     
     getThreeRandomPokemon();
@@ -45,7 +45,7 @@ img2Block.addEventListener('click', () => {
     incrementEncounter(currentThreeArray[2]);
 
     if (Number(getFromLocalStorage('caught') === 10)) {
-        window.location.href = '../results/results.html';
+        window.location.href = './results/results.html';
     }
 
     getThreeRandomPokemon();
@@ -64,7 +64,7 @@ img3Block.addEventListener('click', () => {
     incrementEncounter(currentThreeArray[2]);
 
     if (Number(getFromLocalStorage('caught') === 10)) {
-        window.location.href = '../results/results.html';
+        window.location.href = './results/results.html';
     }
 
     getThreeRandomPokemon();

@@ -1,6 +1,4 @@
-import { getFromLocalStorage } from './utils.js';
-
-
+import { getFromLocalStorage } from '../utils.js';
 
 export function renderResultsTable(){
 

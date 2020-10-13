@@ -1,14 +1,10 @@
-import { incrementCaught, renderThreePokemon, getThreeRandomPokemon, initializeData, incrementEncounter } from './catch-utils.js';
+import { incrementCaught, renderThreePokemon, getThreeRandomPokemon, incrementEncounter } from './catch-utils.js';
 import { setInLocalStorage, getFromLocalStorage, reset } from '../utils.js';
 
-initializeData();
-const tempArray = [1, 1, 1];
-setInLocalStorage('currentThree', tempArray);
 getThreeRandomPokemon();
 const currentThreeArray = getFromLocalStorage('currentThree');
 renderThreePokemon(currentThreeArray);
 setInLocalStorage('caught', 0);
-
 
 const img1Block = document.getElementById('img1');
 const img2Block = document.getElementById('img2');

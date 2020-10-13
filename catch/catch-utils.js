@@ -1,27 +1,6 @@
 import pokeRawArray from '../data/pokemon.js';
 import { setInLocalStorage, getFromLocalStorage } from '../utils.js';
 
-export function initializeData(){
-
-    let pokeArray = [];
-
-    for (let i = 0; i < pokeRawArray.length; i++){
-
-        var pokemon = {
-            name: pokeRawArray[i].pokemon,
-            imgURL: pokeRawArray[i].url_image,
-            encounter: 0,
-            caught: 0,
-            usedLastRound: false
-        };
-
-        pokeArray.push(pokemon);
-        setInLocalStorage('session1', pokeArray);
-    }
-}
-
-
-
 export function getThreeRandomPokemon(){
 
     let indexArray = [];

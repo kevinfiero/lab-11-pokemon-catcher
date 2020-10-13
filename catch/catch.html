@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/catch.css">
+    <title>Catch 'em All!</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <label id='num-caught'></label>
+        </div>
+        <div id = 'icon-group'>
+            <!-- <a href = '../catch/catch.html'><img class = 'header-icons' title='Catch' src='../assets/pokeball.svg'></a>
+            <a href = '../results/results.html'><img class = 'header-icons' title='Results' src='../assets/pokedex.svg'></a> -->
+            <button id='reset'>Reset</button>
+        </div>
+        
+    </header>
+    <main>
+        <section id='main-top'>
+            <h1>Gotta Catch 'em All!</h1>
+            <p>Instructions
+                <ul>
+                    <li>Click on a Pokémon to capture!</li>
+                    <li>As a Pokémon you have encountered appears again you will see your catch and encounter data.</li>
+                    <li>A counter will keep track of your overall total caught.</li>
+                    <li>After ten rounds you will be brought to your results.</li>
+                    <li>You can reset the round with the button in the top right.</li>
+                </ul>
+            </p>
+
+        </section>
+        <section id='main-bottom' class='flex-row'>
+            <div class = 'center-content flex-column'>
+                <label class='center-content'>
+                    <input type='radio' name='poke-select'>
+                    <img id='img1' src='http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png'>
+                </label>
+                <table>
+                    <tr>
+                        <!-- <th class = 'cell1'></th> -->
+                        <th>Encountered</th>
+                        <th>Caught</th>
+                    </tr>
+                    <tr>
+                        <!-- <td>Current</td> -->
+                        <td id='encounter-current-1'>0</td>
+                        <td id='caught-current-1'>0</td>
+                    </tr>
+                    <!-- <tr>
+                        <td>Global</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr> -->
+                </table>
+            </div>
+            <div class = 'center-content flex-column'>
+                <label>
+                    <input type='radio' name='poke-select'>
+                    <img id='img2'src='http://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png'>
+                </label>
+                <table>
+                    <tr>
+                        <!-- <th class = 'cell1'></th> -->
+                        <th>Encountered</th>
+                        <th>Caught</th>
+                    </tr>
+                    <tr>
+                        <!-- <td>Current</td> -->
+                        <td id='encounter-current-2'>0</td>
+                        <td id='caught-current-2'>0</td>
+                    </tr>
+                    <!-- <tr>
+                        <td>Global</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr> -->
+                </table>
+            </div>
+            <div class = 'center-content flex-column'>
+                <label>
+                    <input type='radio' name='poke-select'>
+                    <img id='img3' src='http://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png'>
+                </label>
+                <table>
+                    <tr>
+                        <!-- <th class = 'cell1'></th> -->
+                        <th>Encountered</th>
+                        <th>Caught</th>
+                    </tr>
+                    <tr>
+                        <!-- <td>Current</td> -->
+                        <td id='encounter-current-3'>0</td>
+                        <td id='caught-current-3'>0</td>
+                    </tr>
+                    <!-- <tr>
+                        <td>Global</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr> -->
+                </table>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+    </footer>
+
+    <script type="module" src="catch.js"></script>
+</body>
+
+</html>

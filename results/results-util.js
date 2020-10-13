@@ -2,9 +2,7 @@ import { getFromLocalStorage } from '../utils.js';
 
 export function renderResultsTable(){
 
-    
     const pokeArray = getFromLocalStorage('session1');
-
 
     if (pokeArray !== null){
         const tbody = document.getElementById('table-body');
@@ -21,10 +19,6 @@ export function renderResultsTable(){
             caught = pokeArray[i].caught;
             tr.innerHTML = `<tr><td>${name}</td><td>${encounter}</td><td>${caught}</td></tr>`;
             tbody.appendChild(tr); 
-
-
-
-
         }
     }
 }

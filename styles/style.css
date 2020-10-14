@@ -117,9 +117,9 @@ div{
 }
 
 .header-icons{
-    
-    height: 100%;
-    width: 100%;
+    height: 60px;
+    width: 150px;
+
 }
 
 #num-caught-div{
@@ -132,7 +132,7 @@ div{
     text-align: center;
 }
 
-#catch{
+/* #catch{
     height: 60px;
     width: 150px;
 }
@@ -145,4 +145,4 @@ div{
 #globe{
     height: 60px;
     width: 150px;
-}
+} */

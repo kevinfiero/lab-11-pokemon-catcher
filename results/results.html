@@ -13,37 +13,40 @@
 </head>
 
 <body>
-    <header>
-        <div class='flex-column'>
-            <label id='num-rounds'></label>
-            <button id='reset'>Reset</button>
-            
-        </div>
-        <div id = 'icon-group' class = 'flex-row'>
-            <div class = 'flex-column'>
-                <a href = '../catch/catch.html'><img class = 'header-icons' id='catch' title='Catch' src='../assets/pokeball.svg'></a>
-                <label>Catch More!</label>
+    <header class='flex-row between'>
+        <img id = 'title' src='../assets/title.png'>
+        <div class = 'flex-row'>
+            <div class='flex-column'>
+                <label id='num-rounds'></label>
+                <button id='reset'>Reset</button>
             </div>
-            <div class = 'flex-column'>
-                <a href = './results.html'><img class = 'header-icons' id='globe' title='Last Round Results' src='../assets/pokedex.svg'></a>
-                <label>Last Round Results</label>  
-            </div>
-            <div class = 'flex-column'>
-                <a href = '../global-results/global-results.html'><img class = 'header-icons' id='globe' title='Global Results' src='../assets/globe.svg'></a>
-                <label>Global Results</label>  
-            </div>
-            
+            <div id = 'icon-group' class = 'flex-row'>
+                <div class = 'flex-column'>
+                    <a href = '../catch/catch.html'><img class = 'header-icons' id='catch' title='Catch' src='../assets/pokeball.svg'></a>
+                    <label>Catch More!</label>
+                </div>
+                <div class = 'flex-column'>
+                    <a href = './results.html'><img class = 'header-icons' id='globe' title='Last Round Results' src='../assets/pokedex.svg'></a>
+                    <label>Last Round Results</label>  
+                </div>
+                <div class = 'flex-column'>
+                    <a href = '../global-results/global-results.html'><img class = 'header-icons' id='globe' title='Global Results' src='../assets/globe.svg'></a>
+                    <label>Global Results</label>  
+                </div>
+            </div>    
         </div>
     </header>
     <main>
-        <p>Click Reset to clear your progress!</p>
-        <p>Click the Pokéball to play again!</p>
-        <p>Check out Global Results by clicking the world icon!</p>
+        <ul>
+            <li>Click Reset to clear your progress!</li>
+            <li>Click the Pokéball to play again!</li>
+            <li>Check out Global Results by clicking the globe icon!</li>
+        </ul>
         <div class='flex-column'>
             <h1>Last Round Results</h1>
             <table>
                 <thead>
-                    <th>Pokemon</th>
+                    <th>Pokémon</th>
                     <th>Encountered</th>
                     <th>Caught</th>
                 </thead>
@@ -62,5 +65,4 @@
 
     <script type="module" src="results.js"></script>
 </body>
-
 </html>

@@ -1,10 +1,13 @@
 import { getFromLocalStorage, nextRound, reset } from '../utils.js';
-import { renderResultsTable } from './results-util.js';
+import { renderGlobalResultsTable, updateNumRounds } from './global-results-util.js';
 
-renderResultsTable();
+renderGlobalResultsTable();
 
 const resetButton = document.getElementById('reset');
 const catchButton = document.getElementById('catch');
+
+updateNumRounds();
+
 
 resetButton.addEventListener('click', () => {
     reset();
@@ -15,9 +18,7 @@ catchButton.addEventListener('click', () => {
     nextRound();
 });
 
-const pokeData = getFromLocalStorage('pokeData');
-const roundNum = getFromLocalStorage('round');
-const pokeArray = pokeData[roundNum];
+const pokeArray = getFromLocalStorage('global');
 const encounters = [];
 const caught = [];
 const label = [];
@@ -69,9 +70,9 @@ myChart.canvas.parentNode.style.height = '800px';
 myChart.canvas.parentNode.style.width = '1000px';
 
 export function randomColor(){
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
+    const r = Math.floor(Math.random()*255);
+    const g = Math.floor(Math.random()*255);
+    const b = Math.floor(Math.random()*255);
 
     return `rgb(${r},${g},${b})`;
 }

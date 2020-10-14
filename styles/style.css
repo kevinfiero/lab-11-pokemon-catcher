@@ -5,7 +5,7 @@ body {
     --color4: #ffffff;
     --color5: #ffffff;
     
-    --header-height: 80px;
+    --header-height: 110px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 10px;
     --footer-height: 25px;
@@ -125,4 +125,24 @@ div{
 #num-caught-div{
     width: 200px;
     height: 50px;
+}
+
+#icon-group{
+    margin:0px;
+    text-align: center;
+}
+
+#catch{
+    height: 60px;
+    width: 150px;
+}
+
+#pokedex{
+    height: 60px;
+    width: 150px;
+}
+
+#globe{
+    height: 60px;
+    width: 150px;
 }

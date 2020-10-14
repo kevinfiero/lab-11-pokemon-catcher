@@ -1,4 +1,4 @@
-import { getFromLocalStorage, nextRound, reset } from '../utils.js';
+import { getFromLocalStorage, nextRound, reset, cap } from '../utils.js';
 import { renderGlobalResultsTable, updateNumRounds } from './global-results-util.js';
 
 renderGlobalResultsTable();
@@ -31,7 +31,7 @@ for (let i = 0; i < pokeArray.length; i++){
 
     encounters.push(pokeArray[i].encounter);
     caught.push(pokeArray[i].caught);
-    label.push(pokeArray[i].name);
+    label.push(cap(pokeArray[i].name));
     labelColorsEncounter[i] = randomColorEncounter;
     labelColorsCaught[i] = randomColorCaught;
 
@@ -76,3 +76,4 @@ export function randomColor(){
 
     return `rgb(${r},${g},${b})`;
 }
+

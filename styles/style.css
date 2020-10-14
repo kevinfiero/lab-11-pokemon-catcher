@@ -1,10 +1,8 @@
+html{
+    background-color: #fff1e6;
+}
+
 body {
-    --color1: #ffffff;
-    --color2: #ffffff;
-    --color3: #ffffff;
-    --color4: #ffffff;
-    --color5: #ffffff;
-    
     --header-height: 110px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 10px;
@@ -97,6 +95,10 @@ input[type='radio']:checked + img{
     flex-direction: column;
 }
 
+.between{
+    justify-content: space-between;
+}
+
 .cell1{
     border: none;
 }
@@ -132,17 +134,7 @@ div{
     text-align: center;
 }
 
-/* #catch{
-    height: 60px;
-    width: 150px;
+#title{
+    height: 84px;
+    width: 185px;
 }
-
-#pokedex{
-    height: 60px;
-    width: 150px;
-}
-
-#globe{
-    height: 60px;
-    width: 150px;
-} */

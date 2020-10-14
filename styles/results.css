@@ -1,9 +1,17 @@
+main{
+    margin-top: 50px;
+}
+
 table{
     margin: 30px;
 }
 
 th{
     font-weight: 800;
+}
+
+td{
+    text-transform: capitalize;
 }
 
 button{
@@ -19,3 +27,7 @@ button{
     text-align: center;
     margin-top: 5px;
 }
+
+canvas {
+    align-content: center;
+  }

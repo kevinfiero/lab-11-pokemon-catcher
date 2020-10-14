@@ -22,7 +22,7 @@ export function reset(){
     location.reload();
     setInLocalStorage('pokeData', []);
     initializeData();
-    setInLocalStorage('currentThree', [1, 1, 1]);
+    setInLocalStorage('currentThree', [-1, -1, -1]);
     setInLocalStorage('round', 0);
 }
 
@@ -55,6 +55,6 @@ export function nextRound(){
 
     initializeData();
 
-    setInLocalStorage('currentThree', [1, 1, 1]);
+    setInLocalStorage('currentThree', [-1, -1, -1]);
     
 }

@@ -65,7 +65,7 @@ const myChart = new Chart(ctx, {
     }
 });
 
-myChart.canvas.parentNode.style.height = '800px';
+myChart.canvas.parentNode.style.height = '500px';
 myChart.canvas.parentNode.style.width = '1000px';
 
 export function randomColor(){
